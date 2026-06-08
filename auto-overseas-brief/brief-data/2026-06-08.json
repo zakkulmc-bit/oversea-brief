@@ -1,0 +1,156 @@
+{
+  "date": "2026-06-08",
+  "weekday": "星期一",
+  "primary": "#927BBE",
+  "primary_light": "#F2EEFA",
+  "tone": "莫兰迪紫",
+  "title": "The Auto Overseas Brief",
+  "chinese_title": "汽车出海全球日报",
+  "producer": "星期一研究室",
+  "opening": "出海从规模竞争切换到本地化深耕的拐点已到",
+  "sections": [
+    {
+      "id": "01",
+      "name": "出口销量与市场",
+      "sub": "CAAM · BYD · 全球需求",
+      "items": [
+        {
+          "tool": "中国新能源出口",
+          "heading": "前四月破138万辆历史峰值",
+          "desc": "2026年1-4月中国新能源汽车出口达138万辆，同比激增，四月乘用车出口同比增近85%，NEV首次超出口总量50%。海外市场已成化解内需疲软的核心阀门。",
+          "source_url": "https://cnevpost.com/2026/05/11/china-apr-2026-nev-sales-caam/",
+          "source_label": "cnevpost.com",
+          "source_date": "2026-05-11",
+          "mark": "◆"
+        },
+        {
+          "tool": "比亚迪",
+          "heading": "5月海外销量再破纪录",
+          "desc": "比亚迪5月海外销售160,644辆，同比猛增80%，连续刷新单月纪录，前五月累计出海逾61.5万辆。海外占比首超总销量40%，上调全年出海目标至150万辆。",
+          "source_url": "https://eletric-vehicles.com/byd/byd-overseas-sales-hit-new-record-in-may-exceed-40-of-total-volume/",
+          "source_label": "eletric-vehicles.com",
+          "source_date": "2026-06-01",
+          "mark": "◇"
+        },
+        {
+          "tool": "CAAM预测",
+          "heading": "全年出口目标740万辆",
+          "desc": "中汽协预测2026年中国汽车整体出口达740万辆，同比增4.3%；全球EV总销量将达2300万辆，中国一国供应超半数。出口已成国内车企规模支撑的第一变量。",
+          "source_url": "https://cnevpost.com/2026/01/14/caam-forecasts-china-nev-sales-19-million-2026/",
+          "source_label": "cnevpost.com",
+          "source_date": "2026-01-14",
+          "source_window": "最近官方参考",
+          "mark": "◈"
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "name": "政策法规",
+      "sub": "欧盟关税 · 价格承诺机制 · 贸易摩擦",
+      "items": [
+        {
+          "tool": "欧盟价格承诺机制",
+          "heading": "最低价替代关税正式落地",
+          "desc": "2026年1月欧盟与中国达成协议，中国车企可承诺最低出口价格以替代缴纳全额反补贴税。欧委会已发布正式指南，为接受监管换取市场准入提供结构性通道。",
+          "source_url": "https://www.electrive.com/2026/01/12/good-bye-tariffs-eu-publishes-guidance-on-minimum-price-mechanism-with-china/",
+          "source_label": "electrive.com",
+          "source_date": "2026-01-12",
+          "source_window": "最近官方参考",
+          "mark": "◆"
+        },
+        {
+          "tool": "欧盟贸易顺差",
+          "heading": "前四月顺差同比扩大24%",
+          "desc": "2026年前四月中欧贸易顺差达1130亿美元，较上年同期的910亿美元显著扩大，布鲁塞尔正讨论《工业加速法》等追加防御措施，新一轮政策压力窗口临近。",
+          "source_url": "https://www.euronews.com/my-europe/2026/05/18/as-trade-war-with-china-looms-how-can-the-eu-defend-itself",
+          "source_label": "euronews.com",
+          "source_date": "2026-05-18",
+          "mark": "◇"
+        },
+        {
+          "tool": "美国关税转移效应",
+          "heading": "中国出口向欧洲加速分流",
+          "desc": "ECB分析显示，2025年美国大幅加征关税后，中国出口大规模向欧洲等非美市场转移，进一步推高欧洲中国车进口量，加剧欧盟本土车企竞争压力。",
+          "source_url": "https://www.ecb.europa.eu/press/economic-bulletin/focus/2026/html/ecb.ebbox202601_01~fde39c8d00.en.html",
+          "source_label": "ecb.europa.eu",
+          "source_date": "2026-01-23",
+          "source_window": "最近官方参考",
+          "mark": "◈"
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "name": "本地化与供应链",
+      "sub": "BYD工厂 · 东南亚布局 · 奇瑞日本",
+      "items": [
+        {
+          "tool": "比亚迪",
+          "heading": "东南亚与欧洲工厂同步投产",
+          "desc": "比亚迪泰国工厂年产能15万辆已投运，印尼工厂2026年一季度启动，匈牙利欧洲工厂2026年内投产。本地制造成为绕过关税、深耕市场的主轴战略。",
+          "source_url": "https://www.straitstimes.com/asia/chinese-carmakers-rev-up-ev-production-in-south-east-asia-but-net-gains-to-local-workers-uncertain",
+          "source_label": "straitstimes.com",
+          "source_date": "2026-05-20",
+          "mark": "◆"
+        },
+        {
+          "tool": "奇瑞",
+          "heading": "联手Autobacs进军日本轻车市场",
+          "desc": "奇瑞与日本汽配零售商Autobacs Seven共同成立EMT合资公司，计划2027年在日本推出新能源轻型车品牌Emta，首款微型纯电车对标铃木，目标2029年形成四款车型矩阵。",
+          "source_url": "https://paultan.org/2026/05/28/chery-to-enter-japan-market-via-emt-joint-venture/",
+          "source_label": "paultan.org",
+          "source_date": "2026-05-28",
+          "mark": "◇"
+        },
+        {
+          "tool": "中国车企本地化",
+          "heading": "欧洲制造布局从出口导向切换",
+          "desc": "SP Global分析指出，比亚迪、奇瑞、上汽等中国车企正系统性地将欧洲策略从纯出口转向本地生产，以降低关税敞口并强化品牌认知，本地化成为出海第二阶段核心命题。",
+          "source_url": "https://www.spglobal.com/automotive-insights/en/blogs/2026/05/chinese-automakers-manufacturing-localization-europe",
+          "source_label": "spglobal.com",
+          "source_date": "2026-05-15",
+          "mark": "◈"
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "name": "竞争格局",
+      "sub": "中国品牌 · 欧洲市场 · 全球份额",
+      "items": [
+        {
+          "tool": "中国品牌份额",
+          "heading": "2030年全球占比或达13%",
+          "desc": "艾睿铂预测，中国品牌在海外的销量将从2026年约300万辆增至2030年约900万辆，海外市场份额由3%升至13%。全球竞争格局重构速度远超传统整车厂预期。",
+          "source_url": "https://xueqiu.com/9080548226/295740047",
+          "source_label": "xueqiu.com（艾睿铂报告）",
+          "source_date": "2025-06-30",
+          "source_window": "最近官方参考",
+          "mark": "◆"
+        },
+        {
+          "tool": "欧洲市场",
+          "heading": "加税后中国车销量仍在加速",
+          "desc": "荣鼎咨询报告显示，欧盟加征关税逾一年半后，中国品牌汽车在欧进口量反而持续加速，"中国制造壁垒"实际并不存在于欧盟法律层面，价格竞争力仍占主导。",
+          "source_url": "https://rhg.com/research/dont-stop-me-now-chinese-cars-are-having-a-good-time-in-europe/",
+          "source_label": "rhg.com",
+          "source_date": "2026-05-01",
+          "source_window": "邻近窗口",
+          "mark": "◇"
+        },
+        {
+          "tool": "比亚迪匈牙利工厂",
+          "heading": "劳工调查成欧洲扩张新风险",
+          "desc": "欧洲议会就比亚迪匈牙利工厂劳动条件展开审查，这是中国车企首次在欧盟层面被引入劳工合规议题。出海进入合规深水区，ESG风险管理成出海必修课。",
+          "source_url": "https://www.cnbc.com/2026/04/28/byd-eu-parliament-labor-abuse-hungary-factory-investigation.html",
+          "source_label": "cnbc.com",
+          "source_date": "2026-04-28",
+          "mark": "◈"
+        }
+      ]
+    }
+  ],
+  "insight": "出海逻辑已从"数量出口"演进到"本地扎根"：工厂落地绑定市场准入，合规门槛倒逼供应链升级，竞争终局是谁能率先在海外建立与国内同等效率的全链路体系。",
+  "method_note": "采集窗口以2026-06-01至2026-06-08为优先；窗口外资料标注为邻近窗口或最近官方参考。"
+}

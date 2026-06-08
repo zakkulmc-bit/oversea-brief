@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Auto Overseas Brief | 06/08 · 星期一 | 星期一研究室</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Noto+Serif+SC:wght@400;500;700&family=Source+Serif+4:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --primary: #927BBE;
+  --primary-light: #F2EEFA;
+  --paper: #FCFBF9;
+  --ground: #EEECE8;
+  --text: #151515;
+  --body: #2E2E2E;
+  --rule: #D9D2CE;
+  --headline-rule: color-mix(in srgb, var(--primary) 78%, #151515);
+  --section-ink: var(--primary);
+  --section-ink-soft: var(--primary-light);
+  --section-guide: color-mix(in srgb, var(--primary) 42%, transparent);
+}
+body {
+  background:
+    radial-gradient(circle at 14% 18%, color-mix(in srgb, var(--primary) 18%, transparent), transparent 26%),
+    radial-gradient(circle at 88% 78%, color-mix(in srgb, var(--primary) 10%, transparent), transparent 24%),
+    var(--ground);
+  display: flex;
+  justify-content: center;
+  padding: 36px clamp(32px, 4vw, 72px);
+}
+.card {
+  position: relative;
+  overflow: visible;
+  background: var(--paper);
+  max-width: 1480px;
+  width: 100%;
+  min-height: min(1046px, calc((100vw - 28px) / 1.414));
+  height: auto;
+  padding: 36px clamp(52px, 4.6vw, 72px);
+  border: 1px solid #D8D1CB;
+  box-shadow: 0 6px 30px rgba(17,17,17,0.05);
+  font-family: 'Source Serif 4', 'Noto Serif SC', serif;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  pointer-events: none;
+  border: 1px solid rgba(21,21,21,0.08);
+  background-image:
+    linear-gradient(rgba(21,21,21,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(21,21,21,0.035) 1px, transparent 1px);
+  background-size: 38px 38px;
+  mask-image: linear-gradient(to bottom, transparent, #000 16%, #000 82%, transparent);
+}
+.card::after {
+  content: "THE AUTO OVERSEAS BRIEF / GLOBAL SIGNALS";
+  position: absolute;
+  right: 28px;
+  top: 112px;
+  color: rgba(21,21,21,0.18);
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.26em;
+  writing-mode: vertical-rl;
+  pointer-events: none;
+}
+.header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 26px;
+  border-bottom: 2px solid var(--text);
+  border-top: 6px solid var(--headline-rule);
+  padding-top: 24px;
+  margin-bottom: 34px;
+}
+.header-left .brand {
+  font-family: 'Playfair Display', 'Noto Serif SC', serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1;
+}
+.header-right { text-align: right; }
+.header-right .lab { font-size: 12px; font-weight: 600; color: #5A5A5A; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 4px; }
+.header-right .date { font-size: 11px; color: #777; letter-spacing: 0.08em; }
+.quote-card {
+  position: relative;
+  z-index: 2;
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--primary-light) 72%, transparent), transparent 42%),
+    #F8F6F2;
+  border-top: 1px solid rgba(21,21,21,0.18);
+  border-bottom: 1px solid rgba(21,21,21,0.18);
+  padding: 18px 22px 18px 0;
+  margin-bottom: 46px;
+  font-size: 22px;
+  line-height: 1.42;
+  color: var(--body);
+  font-weight: 500;
+  min-height: 132px;
+  display: grid;
+  grid-template-columns: 74px minmax(0,1fr) 230px;
+  gap: 28px;
+  align-items: center;
+  overflow: hidden;
+}
+.quote-card::before {
+  content: "LEAD";
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid rgba(21,21,21,0.18);
+  color: var(--section-ink);
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  writing-mode: vertical-rl;
+}
+.quote-copy { position: relative; z-index: 1; max-width: 760px; }
+.quote-label { font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 600; color: color-mix(in srgb, var(--section-ink) 64%, #151515); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 10px; }
+.hero-illustration { position: relative; width: 230px; height: 128px; z-index: 1; justify-self: end; pointer-events: none; opacity: 0.74; }
+.hero-line { fill: none; stroke: var(--section-ink); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.hero-soft { fill: var(--section-ink-soft); stroke: color-mix(in srgb, var(--section-ink) 28%, transparent); stroke-width: 1; }
+.hero-ink { fill: color-mix(in srgb, var(--section-ink) 72%, #151515); }
+.hero-label { fill: rgba(21,21,21,0.28); font-family: 'Inter', sans-serif; font-size: 8px; font-weight: 700; letter-spacing: 0.18em; }
+.sections-layout {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  column-gap: 46px;
+  row-gap: 78px;
+  align-items: stretch;
+  overflow: visible;
+  padding: 8px 10px 4px;
+}
+.sections-layout::before {
+  content: "AUTO INDUSTRY MAP";
+  position: absolute;
+  left: 50%;
+  top: -14px;
+  transform: translateX(-50%);
+  z-index: 1;
+  padding: 0 12px;
+  background: var(--paper);
+  color: rgba(21,21,21,0.34);
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  white-space: nowrap;
+}
+.section { padding: 14px 0 16px; }
+.sections-layout > .section {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  padding: 18px 18px 14px;
+  background: color-mix(in srgb, var(--paper) 86%, var(--section-ink-soft));
+  border: 1px solid rgba(21,21,21,0.08);
+  box-shadow: 14px 16px 0 color-mix(in srgb, var(--primary) 8%, transparent);
+}
+.sections-layout > .section::before {
+  content: "";
+  position: absolute;
+  top: -8px; right: 18px;
+  width: 42px; height: 14px;
+  background: var(--section-ink-soft);
+  border: 1px solid rgba(21,21,21,0.09);
+  transform: skewX(-18deg);
+}
+.sections-layout > .section::after {
+  content: "SIGNAL NODE";
+  position: absolute;
+  right: 20px; bottom: 12px;
+  color: rgba(21,21,21,0.17);
+  font-family: 'Inter', sans-serif;
+  font-size: 9px; font-weight: 700; letter-spacing: 0.18em;
+}
+.section-header { position: relative; margin-bottom: 12px; min-height: 46px; }
+.section-tag {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text);
+  font-family: 'Inter', 'Noto Serif SC', serif;
+  font-size: 21px;
+  font-weight: 700;
+}
+.section-tag::before {
+  content: attr(data-num);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px; height: 36px;
+  background: var(--section-ink);
+  color: #fff;
+  font-size: 16px; font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  transform: skewX(-12deg);
+  box-shadow: 8px 8px 0 var(--section-ink-soft);
+}
+.section-tag::after {
+  content: "";
+  position: absolute;
+  left: 64px; right: -96px; top: 50%;
+  z-index: -1;
+  border-top: 1px dashed var(--section-guide);
+  transform: translateY(-50%) rotate(-3deg);
+}
+.section-sub { font-size: 10px; color: #787878; margin-top: 4px; margin-bottom: 14px; margin-left: 66px; letter-spacing: 0.08em; text-transform: uppercase; }
+.section-items { display: flex; flex-direction: column; gap: 18px; flex: 1 1 auto; }
+.item {
+  flex: 0 0 auto;
+  background: rgba(252,251,249,0.66);
+  border: 1px solid rgba(21,21,21,0.07);
+  border-radius: 2px;
+  padding: 22px 30px 24px;
+  display: flex;
+  flex-direction: column;
+}
+.item-title { font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 14px; line-height: 1.32; display: flex; align-items: flex-start; gap: 12px; }
+.item-tool { color: #1C1C1C; font-weight: 700; }
+.item-divider, .item-heading { color: var(--text); font-weight: 700; }
+.item-copy { flex: 1; }
+.item-num {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 26px; height: 30px; padding: 0 8px;
+  background: transparent; font-size: 0; font-weight: 700;
+  font-family: 'Playfair Display', 'Noto Serif SC', serif;
+  color: var(--section-ink); flex-shrink: 0; line-height: 1;
+}
+.item-num::before { content: attr(data-mark); font-size: 17px; color: var(--section-ink); line-height: 1; }
+.item-desc { font-size: 16px; color: var(--body); line-height: 1.72; font-weight: 400; flex: 0 0 auto; }
+.item-source { font-size: 13px; color: #444; text-decoration: none; opacity: 0.9; font-weight: 500; margin-top: auto; padding-top: 20px; }
+.item-source:hover { opacity: 1; text-decoration: underline; }
+.source-date { font-size: 11px; color: #7C7C7C; margin-left: 8px; font-weight: 500; }
+.insight-card {
+  position: relative; z-index: 2;
+  background: transparent;
+  border-top: 1px solid rgba(21,21,21,0.2);
+  border-bottom: 1px solid rgba(21,21,21,0.12);
+  padding: 20px 4px 18px;
+  margin-top: 64px; margin-bottom: 38px;
+  display: grid;
+  grid-template-columns: 188px minmax(0,1fr);
+  column-gap: 18px;
+  align-items: center;
+}
+.insight-label {
+  position: relative; justify-self: center;
+  width: max-content;
+  transform: translateY(12px);
+  color: var(--section-ink);
+  font-family: 'Inter', sans-serif;
+  font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+}
+.insight-label::after {
+  content: "";
+  display: block;
+  width: 44px; height: 44px;
+  margin-top: 22px; margin-left: auto; margin-right: auto;
+  border: 2px solid color-mix(in srgb, var(--section-ink) 72%, transparent);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 50%, var(--section-ink) 0 4px, transparent 5px),
+    linear-gradient(45deg, transparent 58%, color-mix(in srgb, var(--section-ink) 72%, transparent) 59% 64%, transparent 65%);
+  box-shadow: 14px 14px 0 var(--section-ink-soft);
+  opacity: 0.9;
+}
+.insight-text { font-size: 18px; color: #242424; line-height: 1.72; font-weight: 500; }
+.method-note { grid-column: 2; margin-top: 12px; font-size: 11px; color: #7A7A7A; line-height: 1.6; }
+.footer {
+  position: relative; z-index: 2;
+  border-top: 2px solid var(--text);
+  padding-top: 12px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.footer-lab { font-size: 12px; font-weight: 600; color: #303030; letter-spacing: 0.08em; text-transform: uppercase; }
+.footer-sub { font-size: 11px; color: #666; letter-spacing: 0.03em; }
+@media (max-width: 560px) {
+  body { padding: 0; }
+  .card { padding: 32px 22px; aspect-ratio: auto; }
+  .card::before, .card::after, .sections-layout::before { display: none; }
+  .header-left .brand { font-size: 34px; }
+  .sections-layout { grid-template-columns: 1fr; gap: 0; }
+  .quote-card { display: block; min-height: auto; padding: 18px 20px; font-size: 18px; }
+  .quote-card::before { display: none; }
+  .hero-illustration { display: none; }
+  .sections-layout > .section { background: transparent; border: 0; box-shadow: none; }
+  .sections-layout > .section::before, .sections-layout > .section::after { display: none; }
+  .insight-card { display: block; padding: 18px 0; }
+  .insight-label { margin-bottom: 10px; }
+}
+</style>
+</head>
+<body>
+<main class="card">
+  <header class="header">
+    <div class="header-left"><div class="brand">The Auto Overseas Brief</div></div>
+    <div class="header-right">
+      <div class="lab">星期一研究室</div>
+      <div class="date">06/08 · 星期一</div>
+    </div>
+  </header>
+
+  <div class="quote-card">
+    <div class="quote-copy">
+      <div class="quote-label">今日一句话</div>
+      出海从规模竞争切换到本地化深耕的拐点已到
+    </div>
+    <svg class="hero-illustration" viewBox="0 0 230 128" aria-hidden="true" focusable="false">
+      <!-- Globe grid representing global market -->
+      <ellipse class="hero-soft" cx="115" cy="64" rx="52" ry="52"/>
+      <ellipse class="hero-line" cx="115" cy="64" rx="52" ry="52"/>
+      <ellipse class="hero-line" cx="115" cy="64" rx="28" ry="52"/>
+      <line class="hero-line" x1="63" y1="64" x2="167" y2="64"/>
+      <line class="hero-line" x1="68" y1="42" x2="162" y2="42"/>
+      <line class="hero-line" x1="68" y1="86" x2="162" y2="86"/>
+      <!-- Car silhouette -->
+      <rect class="hero-soft" x="18" y="88" width="46" height="20" rx="4"/>
+      <path class="hero-line" d="M22 88 L28 76 L50 76 L58 88"/>
+      <circle class="hero-ink" cx="28" cy="110" r="6"/>
+      <circle class="hero-ink" cx="52" cy="110" r="6"/>
+      <!-- Route arrow -->
+      <path class="hero-line" d="M68 80 Q90 60 115 64"/>
+      <path class="hero-ink" d="M112 60 L115 64 L119 60 L115 67 Z"/>
+      <text class="hero-label" x="155" y="118">GLOBAL SIGNALS</text>
+    </svg>
+  </div>
+
+  <div class="sections-layout">
+    <section class="section">
+      <div class="section-header">
+        <span class="section-tag" data-num="01">出口销量与市场</span>
+      </div>
+      <div class="section-sub">CAAM · BYD · 全球需求</div>
+      <div class="section-items">
+        <article class="item">
+          <div class="item-title"><span class="item-num" data-mark="◆"></span><span class="item-copy"><span class="item-tool">中国新能源出口</span><span class="item-divider"> | </span><span class="item-heading">前四月破138万辆历史峰值</span></span></div>
+          <p class="item-desc">2026年1-4月中国新能源汽车出口达138万辆，同比激增，四月乘用车出口同比增近85%，NEV首次超出口总量50%。海外市场已成化解内需疲软的核心阀门。</p>
+          <a class="item-source" href="https://cnevpost.com/2026/05/11/china-apr-2026-nev-sales-caam/" target="_blank" rel="noopener">→ cnevpost.com</a><span class="source-date">2026-05-11</span>
+        </article>
+        <article class="item">
+          <div class="item-title"><span class="item-num" data-mark="◇"></span><span class="item-copy"><span class="item-tool">比亚迪</span><span class="item-divider"> | </span><span class="item-heading">5月海外销量再破纪录</span></span></div>
+          <p class="item-desc">比亚迪5月海外销售160,644辆，同比猛增80%，连续刷新单月纪录，前五月累计出海逾61.5万辆。海外占比首超总销量40%，上调全年出海目标至150万辆。</p>
+          <a class="item-source" href="https://eletric-vehicles.com/byd/byd-overseas-sales-hit-new-record-in-may-exceed-40-of-total-volume/" target="_blank" rel="noopener">→ eletric-vehicles.com</a><span class="source-date">2026-06-01</span>
+        </article>
+        <article class="item">
+          <div class="item-title"><span class="item-num" data-mark="◈"></span><span class="item-copy"><span class="item-tool">CAAM预测</span><span class="item-divider"> | </span><span class="item-heading">全年出口目标740万辆</span></span></div>
+          <p class="item-desc">中汽协预测2026年中国汽车整体出口达740万辆，同比增4.3%；全球EV总销量将达2300万辆，中国一国供应超半数。出口已成国内车企规模支撑的第一变量。</p>
+          <a class="item-source" href="https://cnevpost.com/2026/01/14/caam-forecasts-china-nev-sales-19-million-2026/" target="_blank" rel="noopener">→ cnevpost.com</a><span class="source-date">2026-01-14 · 最近官方参考</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <span class="section-tag" data-num="02">政策法规</span>
+      </div>
+      <div class="section-sub">欧盟关税 · 价格承诺机制 · 贸易摩擦</div>
+      <div class="section-items">
+        <article class="item">
+          <div class="item-title"><span class="item-num" data-mark="◆"></span><span class="item-copy"><span class="item-tool">欧盟价格承诺机制</span><span class="item-divider"> | </span><span class="item-heading">最低价替代关税正式落地</span></span></div>
+          <p class="item-desc">2026年1月欧盟与中国达成协议，中国车企可承诺最低出口价格以替代缴纳全额反补贴税。欧委会已发布正式指南，为接受监管换取市场准入提供结构性通道。</p>
+          <a class="item-source" href="https://www.electrive.com/2026/01/12/good-bye-tariffs-eu-publishes-guidance-on-minimum-price-mechanism-with-china/" target="_blank" rel="noopener">→ electrive.com</a><span class="source-date">2026-01-12 · 最近官方参考</span>
+        </article>
+        <article class="item">
+          <div class="item-title"><span class="item-num" data-mark="◇"></span><span class="item-copy"><span class="item-tool">欧盟贸易顺差</span><span class="item-divider"> | </span><span class="item-heading">前四月顺差同比扩大24%</span></span></div>
+          <p class="item-desc">2026年前四月中欧贸易顺差达1130亿美元，较上年同期910亿美元显著扩大，布鲁塞尔正讨论《工业加速法》等追加防御措施，新一轮政策压力窗口临近。</p>
+          <a class="item-source" href="https://www.euronews.com/my-europe/2026/05/18/as-trade-war-with-china-looms-how-can-the-eu-defend-itself" target="_blank" rel="noopener">→ euronews.com</a><span class="source-date">2026-05-18</span>
+        </article>
+        <article class="item">
+          <div class="item-title"><span class="item-num" data-mark="◈"></span><span class="item-copy"><span class="item-tool">美国关税转移效应</span><span class="item-divider"> | </span><span class="item-heading">中国出口向欧洲加速分流</span></span></div>
+          <p class="item-desc">ECB分析显示，2025年美国大幅加征关税后，中国出口大规模向欧洲等非美市场转移，进一步推高欧洲中国车进口量，加剧欧盟本土车企竞争压力。</p>
+          <a class="item-source" href="https://www.ecb.europa.eu/press/economic-bulletin/focus/2026/html/ecb.ebbox202601_01~fde39c8d00.en.html" target="_blank" rel="noopener">→ ecb.europa.eu</a><span class="source-date">2026-01-23 · 最近官方参考</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <span class="section-tag" data-num="03">本地化与供应链</span>
+      </div>
+      <div class="section-sub">BYD工厂 · 东南亚布局 · 奇瑞日本</div>
+      <div class="section-items">
+        <article class="item">
+          <div class="item-title"><span class="item-num" data-mark="◆"></span><span class="item-copy"><span class="item-tool">比亚迪</span><span class="item-divider"> | </span><span class="item-heading">东南亚与欧洲工厂同步投产</span></span></div>
+          <p class="item-desc">比亚迪泰国工厂年产能15万辆已投运，印尼工厂2026年一季度启动，匈牙利欧洲工厂2026年内投产。本地制造成为绕过关税、深耕市场的主轴战略。</p>
+          <a class="item-source" href="https://www.straitstimes.com/asia/chinese-carmakers-rev-up-ev-production-in-south-east-asia-but-net-gains-to-local-workers-uncertain" target="_blank" rel="noopener">→ straitstimes.com</a><span class="source-date">2026-05-20</span>
+        </article>
+        <article class="item">
+          <div class="item-title"><span class="item-num" data-mark="◇"></span><span class="item-copy"><span class="item-tool">奇瑞</span><span class="item-divider"> | </span><span class="item-heading">联手Autobacs进军日本轻车市场</span></span></div>
+          <p class="item-desc">奇瑞与日本汽配零售商Autobacs Seven共同成立EMT合资公司，计划2027年在日本推出新能源轻型车品牌Emta，首款微型纯电车对标铃木，目标2029年形成四款车型矩阵。</p>
+          <a class="item-source" href="https://paultan.org/2026/05/28/chery-to-enter-japan-market-via-emt-joint-venture/" target="_blank" rel="noopener">→ paultan.org</a><span class="source-date">2026-05-28</span>
+        </article>
+        <article class="item">
+          <div class="item-title"><span class="item-num" data-mark="◈"></span><span class="item-copy"><span class="item-tool">中国车企本地化</span><span class="item-divider"> | </span><span class="item-heading">欧洲制造布局从出口导向切换</span></span></div>
+          <p class="item-desc">S&P Global分析指出，比亚迪、奇瑞、上汽等中国车企正系统性地将欧洲策略从纯出口转向本地生产，以降低关税敞口并强化品牌认知，本地化成为出海第二阶段核心命题。</p>
+          <a class="item-source" href="https://www.spglobal.com/automotive-insights/en/blogs/2026/05/chinese-automakers-manufacturing-localization-europe" target="_blank" rel="noopener">→ spglobal.com</a><span class="source-date">2026-05-15 · 邻近窗口</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <span class="section-tag" data-num="04">竞争格局</span>
+      </div>
+      <div class="section-sub">中国品牌 · 欧洲市场 · 全球份额</div>
+      <div class="section-items">
+        <article class="item">
+          <div class="item-title"><span class="item-num" data-mark="◆"></span><span class="item-copy"><span class="item-tool">中国品牌份额</span><span class="item-divider"> | </span><span class="item-heading">2030年全球占比或达13%</span></span></div>
+          <p class="item-desc">艾睿铂预测，中国品牌在海外的销量将从2026年约300万辆增至2030年约900万辆，海外市场份额由3%升至13%。全球竞争格局重构速度远超传统整车厂预期。</p>
+          <a class="item-source" href="https://xueqiu.com/9080548226/295740047" target="_blank" rel="noopener">→ xueqiu.com（艾睿铂报告）</a><span class="source-date">邻近窗口</span>
+        </article>
+        <article class="item">
+          <div class="item-title"><span class="item-num" data-mark="◇"></span><span class="item-copy"><span class="item-tool">欧洲市场</span><span class="item-divider"> | </span><span class="item-heading">加税后中国车销量仍在加速</span></span></div>
+          <p class="item-desc">荣鼎咨询报告显示，欧盟加征关税逾一年半后，中国品牌汽车在欧进口量反而持续加速，"中国制造壁垒"实际并不存在于欧盟法律层面，价格竞争力仍占主导。</p>
+          <a class="item-source" href="https://rhg.com/research/dont-stop-me-now-chinese-cars-are-having-a-good-time-in-europe/" target="_blank" rel="noopener">→ rhg.com</a><span class="source-date">2026-05-01 · 邻近窗口</span>
+        </article>
+        <article class="item">
+          <div class="item-title"><span class="item-num" data-mark="◈"></span><span class="item-copy"><span class="item-tool">比亚迪匈牙利工厂</span><span class="item-divider"> | </span><span class="item-heading">劳工调查成欧洲扩张新风险</span></span></div>
+          <p class="item-desc">欧洲议会就比亚迪匈牙利工厂劳动条件展开审查，这是中国车企首次在欧盟层面被引入劳工合规议题。出海进入合规深水区，ESG风险管理成出海必修课。</p>
+          <a class="item-source" href="https://www.cnbc.com/2026/04/28/byd-eu-parliament-labor-abuse-hungary-factory-investigation.html" target="_blank" rel="noopener">→ cnbc.com</a><span class="source-date">2026-04-28 · 邻近窗口</span>
+        </article>
+      </div>
+    </section>
+  </div>
+
+  <aside class="insight-card">
+    <div class="insight-label">今日洞察</div>
+    <p class="insight-text">出海逻辑已从"数量出口"演进到"本地扎根"：工厂落地绑定市场准入，合规门槛倒逼供应链升级，竞争终局是谁能率先在海外建立与国内同等效率的全链路体系。</p>
+    <p class="method-note">采集窗口以2026-06-01至2026-06-08为优先；窗口外资料标注为邻近窗口或最近官方参考。</p>
+  </aside>
+
+  <footer class="footer">
+    <div class="footer-lab">星期一研究室出品</div>
+    <div class="footer-sub">汽车出海全球日报 · 行业动态 · 机会判断 · 来源可追溯</div>
+  </footer>
+</main>
+</body>
+</html>
