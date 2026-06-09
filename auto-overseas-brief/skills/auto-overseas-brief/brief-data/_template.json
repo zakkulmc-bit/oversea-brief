@@ -1,0 +1,127 @@
+{
+  "date": "YYYY-MM-DD",
+  "weekday": "星期二",
+  "opening": "示例开场：用一句不超过 50 字的判断概括当日汽车出海的结构性变化。",
+  "insight": "示例洞察：跨栏目综合出口数据、政策、研究与动态，给出一句不超过 150 字的明确判断，避免模糊套话。",
+  "methodNote": "采集窗口以最近 7 天为优先；窗口外资料标注为邻近窗口或最近官方参考。",
+  "homepage": {
+    "headline": "示例：当日核心判断标题",
+    "summary": "出口与海外数据、政策法规、行业研究与行业动态同步收束到一个判断。",
+    "mobileSections": [
+      { "name": "出口与海外数据", "summary": "示例：当日出口/海外数据要点。" },
+      { "name": "政策法规", "summary": "示例：当日政策法规要点。" },
+      { "name": "行业研究", "summary": "示例：当日行业研究要点。" },
+      { "name": "行业动态", "summary": "示例：当日行业动态要点。" }
+    ]
+  },
+  "sections": [
+    {
+      "name": "出口与海外数据",
+      "subtitle": "CAAM · 海关总署 · SMMT/ACEA",
+      "items": [
+        {
+          "title": "示例数据源 | 示例核心动作短语",
+          "description": "先写事实（出口规模、品类或目的地结构数据），再写对出海运营的影响，约 60-80 字。",
+          "sourceUrl": "https://example.com/export-1",
+          "sourceName": "example.com",
+          "sourceDateLabel": "YYYY-MM-DD"
+        },
+        {
+          "title": "示例数据源 | 示例核心动作短语",
+          "description": "先写事实，再写影响。窗口外资料在 sourceDateLabel 后追加 · 邻近窗口 或 · 最近官方参考。",
+          "sourceUrl": "https://example.com/export-2",
+          "sourceName": "example.com",
+          "sourceDateLabel": "YYYY-MM-DD · 邻近窗口"
+        },
+        {
+          "title": "示例数据源 | 示例核心动作短语",
+          "description": "先写事实，再写影响。",
+          "sourceUrl": "https://example.com/export-3",
+          "sourceName": "example.com",
+          "sourceDateLabel": "YYYY-MM-DD"
+        }
+      ]
+    },
+    {
+      "name": "政策法规",
+      "subtitle": "商务部 · 工信部 · 进口准入",
+      "items": [
+        {
+          "title": "示例政策源 | 示例核心动作短语",
+          "description": "先写政策事实，再写对市场准入或合规成本的影响。",
+          "sourceUrl": "https://example.com/policy-1",
+          "sourceName": "example.com",
+          "sourceDateLabel": "YYYY-MM-DD"
+        },
+        {
+          "title": "示例政策源 | 示例核心动作短语",
+          "description": "先写事实，再写影响。",
+          "sourceUrl": "https://example.com/policy-2",
+          "sourceName": "example.com",
+          "sourceDateLabel": "YYYY-MM-DD"
+        },
+        {
+          "title": "示例政策源 | 示例核心动作短语",
+          "description": "先写事实，再写影响。",
+          "sourceUrl": "https://example.com/policy-3",
+          "sourceName": "example.com",
+          "sourceDateLabel": "YYYY-MM-DD · 最近官方参考"
+        }
+      ]
+    },
+    {
+      "name": "行业研究",
+      "subtitle": "中汽政研 · 车百智库 · 投行研报",
+      "items": [
+        {
+          "title": "示例研究源 | 示例核心动作短语",
+          "description": "先写研报结论与口径，再写对出海战略的影响。",
+          "sourceUrl": "https://example.com/research-1",
+          "sourceName": "example.com",
+          "sourceDateLabel": "YYYY-MM-DD"
+        },
+        {
+          "title": "示例研究源 | 示例核心动作短语",
+          "description": "先写事实，再写影响。",
+          "sourceUrl": "https://example.com/research-2",
+          "sourceName": "example.com",
+          "sourceDateLabel": "YYYY-MM-DD"
+        },
+        {
+          "title": "示例研究源 | 示例核心动作短语",
+          "description": "先写事实，再写影响。",
+          "sourceUrl": "https://example.com/research-3",
+          "sourceName": "example.com",
+          "sourceDateLabel": "YYYY-MM-DD"
+        }
+      ]
+    },
+    {
+      "name": "行业动态",
+      "subtitle": "盖世汽车 · 中国汽车报 · 车企公告",
+      "items": [
+        {
+          "title": "示例车企 | 示例核心动作短语",
+          "description": "先写事件事实，再写对本地化、渠道或品牌的影响。",
+          "sourceUrl": "https://example.com/news-1",
+          "sourceName": "example.com",
+          "sourceDateLabel": "YYYY-MM-DD"
+        },
+        {
+          "title": "示例车企 | 示例核心动作短语",
+          "description": "先写事实，再写影响。",
+          "sourceUrl": "https://example.com/news-2",
+          "sourceName": "example.com",
+          "sourceDateLabel": "YYYY-MM-DD"
+        },
+        {
+          "title": "示例车企 | 示例核心动作短语",
+          "description": "先写事实，再写影响。",
+          "sourceUrl": "https://example.com/news-3",
+          "sourceName": "example.com",
+          "sourceDateLabel": "YYYY-MM-DD"
+        }
+      ]
+    }
+  ]
+}

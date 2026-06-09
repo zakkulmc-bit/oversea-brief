@@ -1,0 +1,4 @@
+interface:
+  display_name: "The Auto Overseas Brief"
+  short_description: "Initialize and publish sourced daily auto-industry overseas briefs"
+  default_prompt: "Use $auto-overseas-brief to produce today's auto-industry overseas brief and update the archive."
