@@ -53,6 +53,17 @@ npx skills add zakkulmc-bit/auto-overseas-brief -y -g
 5. 写 HTML 前先运行去重检查，并解决所有冲突：
    - `node skills/auto-overseas-brief/scripts/check-brief-dedup.js brief-data/YYYY-MM-DD.json`
 
+### 搜索后端
+
+内置 `WebSearch` 在中国大陆区域不可用（US-only，返回训练数据占位文本而非实时结果）。当搜索不可用时，按以下优先级切换：
+
+1. **如果已配置博查 Bocha MCP**（推荐，国内直连免代理）——使用 `mcp__bocha__bocha_web_search`，每次搜索带 `freshness: "oneWeek"` 优先取最近 7 天结果
+2. **如果有代理**（HTTP/SOCKS 可达）——给 git 和 curl 配上代理，可用 Tavily MCP 或其他境外搜索 API
+3. 博查 MCP 注意：
+   - 正确包名是 `@iflow-mcp/yoko19191-bocha-ai-mcp-server`（不要用 `@humansean/mcp-bocha`，那个包已损坏，启动即崩）
+   - `freshness` 过滤不严格，会混进旧数据；必须**按结果里的真实发布日期**（`2026-0x-xx`）筛选，不要依赖 freshness 参数
+   - Bash 下发 curl 测试 API 时，JSON body 用单引号在 Git Bash 下会报 "Missing request body"；改用 `--data @临时文件` 传参
+
 ## 写作
 
 1. 写一句明确判断式开场，控制在 50 个中文字符以内，落在汽车出海的结构性变化上。
@@ -65,7 +76,39 @@ npx skills add zakkulmc-bit/auto-overseas-brief -y -g
 
 1. 根据 `brief-data/YYYY-MM-DD.json` 生成 `briefs/YYYY-MM-DD.html`，使用规格文档中的星期色板和品牌规则。
 2. 更新 `index.html`，包含最新一期、`往期`推荐列表和七天色板入口；保留历史简报链接。
-3. 生成 `share-images/YYYY-MM-DD.png` 并随当日简报一起发布，作为飞书图片卡的稳定兜底素材。
+
+### 首期 Bootstrap
+
+`render-brief.js` 用最新已有 `briefs/*.html` 当模板生成新详情页。第一期时 `briefs/` 为空 → 脚本报 `No existing brief template found`：
+
+- **第一期**：直接复制 `assets/brief-page-base.html`，手动替换所有内容（日期、开场、四栏目 12 条、洞察、页脚、主题色），另存为 `briefs/YYYY-MM-DD.html`
+- **首页**：复制 `assets/archive-page-base.html` 为 `index.html`，替换手机预览和卡片内容
+- **第二期起**：运行 `node skills/auto-overseas-brief/scripts/render-brief.js YYYY-MM-DD`，脚本会自动用上一期当模板
+
+`render-brief.js` 更新 index 的正则对空白敏感；匹配不上时报 `Unable to replace index brief grid`。如果发生，手动编辑 index.html：
+- 把 `brief-grid` 里的 featured card 替换为最新期（日期、标题、摘要、链接）
+- 把原 featured 降为"查看前一期 →"普通卡片
+- 在 `archive-list` 顶部插入最新期的 `archive-item`
+- 更新 `阅读最新一期` 按钮和手机预览区
+
+### 生成分享图
+
+3. 每期在渲染后立即生成分享图 `share-images/YYYY-MM-DD.png`，作为飞书图片卡的稳定兜底素材。生成方式：
+
+```bash
+# headless Edge（Windows 默认可用，免装依赖）
+EDGE="/c/Program Files (x86)/Microsoft/Edge/Application/msedge.exe"
+"$EDGE" --headless=new --disable-gpu --hide-scrollbars \
+  --force-device-scale-factor=2 \
+  --window-size=1560,1640 \
+  --screenshot="<输出PNG绝对路径>" \
+  "file:///<详情页绝对路径HTML>"
+```
+
+- `--window-size` 高度至少 1640，否则会截掉 03/04 栏目和洞察/页脚
+- 输出需返回 `PNG image data` 才算成功；不依赖 Playwright / Puppeteer
+- 生成完后用 `file` 命令验证：`share-images/YYYY-MM-DD.png: PNG image data, ...`
+
 4. 每期简报都必须保留可点击来源链接和来源日期标注。
 5. 保留基础模板里的归档页/首页布局：
    - 首页外层保持黑、白、灰的中性色，不要用当天主题色污染全局页面框架。

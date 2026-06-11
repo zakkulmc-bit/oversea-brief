@@ -78,6 +78,7 @@
 - Description form: fact (数据/政策/研报结论/事件), then meaning for 出海运营; target 60-80 Chinese characters.
 - Opening line: one judgment about 汽车出海 structural shift, maximum 50 Chinese characters.
 - Closing insight: synthesize multiple sections, maximum 150 Chinese characters; avoid tentative filler.
+- **JSON safety**: `description`、`insight`、`opening` 等字符串值内的中文引号**必须使用全角 `"…"`**，严禁使用半角 `"`（会被 JSON 解析器误认为字符串终止符，导致整条流水线崩溃）。写入数据前可以用 `node -e "JSON.parse(require('fs').readFileSync('brief-data/YYYY-MM-DD.json','utf8'))"` 快速自检。
 
 ## Brand
 
@@ -120,6 +121,6 @@ Keep the weekly palette balanced around purple, blue, green, and pink families; 
 3. Dedup check passes: `node skills/auto-overseas-brief/scripts/check-brief-dedup.js brief-data/YYYY-MM-DD.json`.
 4. The archive contains a clickable card for the new page and preserves earlier links.
 5. Browser inspection shows clean header/footer, no obvious clipping, and functioning navigation.
-6. The share image `share-images/YYYY-MM-DD.png` exists, is a PNG screenshot of the detail page, and is published with the same issue.
+6. The share image `share-images/YYYY-MM-DD.png` exists, is a PNG screenshot of the detail page, and is published with the same issue. Generate using Edge headless (no Playwright dependency): `msedge.exe --headless=new --disable-gpu --hide-scrollbars --force-device-scale-factor=2 --window-size=1560,1640 --screenshot=<output.png> file:///<detail-page.html>` — height must be ≥1640 or sections 03/04 and insight will be cropped. Verify with `file` command returning `PNG image data`.
 7. If the site is published, verify the deployed archive, current detail page, and current share image after Pages builds. Deployment is complete only when the archive contains `briefs/YYYY-MM-DD.html`, the detail page shows the correct date/footer, and `share-images/YYYY-MM-DD.png` returns `image/png`.
 8. After Pages deployment verification succeeds, immediately trigger the Feishu image push with `npm --prefix workers/feishu-brief-push run post-publish-send -- --date YYYY-MM-DD`, or call `/send-image-url` with the published PNG when the Worker screenshot path is unavailable. Do not rely only on the scheduled patrol. Manual trigger commands require `MANUAL_TRIGGER_TOKEN` or `FEISHU_PUSH_TOKEN`.
